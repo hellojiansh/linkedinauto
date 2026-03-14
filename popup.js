@@ -1,6 +1,4 @@
-const BRANDSTORM_URL = "https://brandstorm.loreal.com/en";
-
 document.getElementById("start").addEventListener("click", async () => {
-  await chrome.tabs.create({ url: BRANDSTORM_URL });
+  await chrome.runtime.sendMessage({ type: "START_BRANDSTORM_FLOW" });
   window.close();
 });

@@ -1,12 +1,15 @@
 {
   "manifest_version": 3,
   "name": "Brandstorm Opener",
-  "version": "0.1.0",
-  "description": "Base extension: open brandstorm.loreal.com from the popup.",
+  "version": "0.2.0",
+  "description": "Base extension: open brandstorm.loreal.com, clear site cookies, then open sign up.",
   "action": {
     "default_title": "Brandstorm Opener",
     "default_popup": "popup.html"
   },
-  "permissions": ["tabs"],
+  "background": {
+    "service_worker": "service_worker.js"
+  },
+  "permissions": ["tabs", "browsingData"],
   "host_permissions": ["https://brandstorm.loreal.com/*"]
 }

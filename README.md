@@ -5,7 +5,11 @@ This repo contains a minimal Manifest V3 browser extension.
 ## What it does
 
 - Adds an extension popup with a **Start** button
-- Clicking **Start** opens: `https://brandstorm.loreal.com/en`
+- Clicking **Start**:
+  1. Opens `https://brandstorm.loreal.com/en`
+  2. Clears cookies for `https://brandstorm.loreal.com`
+  3. Navigates the same tab to:
+     `https://brandstorm.loreal.com/en/users/sign_up?onboarding=email&redirect_to=%2Fen%2Fchallenges%2Findia%3Fparticipate_modal%3Dtrue&step=email`
 
 ## Install (Chrome / Edge)
 
@@ -15,6 +19,6 @@ This repo contains a minimal Manifest V3 browser extension.
 4. Select this folder (the repo root)
 5. Click the extension icon → **Start**
 
-## Next steps
+## Notes
 
-If you tell me what actions you want on the site (login, click specific buttons, fill a form, etc.), I can add a content script and an automation flow.
+- Cookie clearing is implemented via the `browsingData` permission in `service_worker.js`.
