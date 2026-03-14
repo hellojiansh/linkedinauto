@@ -9,9 +9,11 @@ This repo contains a minimal Manifest V3 browser extension.
   1. Opens `https://brandstorm.loreal.com/en`
   2. Clears cookies for `https://brandstorm.loreal.com`
   3. Navigates the same tab to the sign-up page
-  4. Fills random values into:
+  4. Generates a random mailbox via mail.tm
+  5. Fills random values into:
      - `#user_first_name`
      - `#user_last_name`
+     - `#user_email`
 
 ## Install (Chrome / Edge)
 
@@ -25,3 +27,4 @@ This repo contains a minimal Manifest V3 browser extension.
 
 - Cookie clearing is implemented via the `browsingData` permission in `service_worker.js`.
 - Input filling is done by injecting a script into the sign-up page via the `scripting` permission.
+- mail.tm access is done from the service worker using `fetch` and requires host permission for `https://api.mail.tm/*`.
