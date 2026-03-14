@@ -17,6 +17,23 @@
         margin: 0 0 10px;
       }
 
+      label {
+        display: block;
+        font-size: 12px;
+        color: #4b5563;
+        margin: 0 0 6px;
+      }
+
+      input {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 8px 10px;
+        border: 1px solid #d1d5db;
+        border-radius: 8px;
+        margin: 0 0 10px;
+        font: inherit;
+      }
+
       button {
         width: 100%;
         padding: 10px 12px;
@@ -41,6 +58,10 @@
   </head>
   <body>
     <h1>Automation base</h1>
+
+    <label for="email">Email (optional)</label>
+    <input id="email" type="email" placeholder="you@example.com" autocomplete="email" />
+
     <button id="start">Start</button>
     <p>Opens https://brandstorm.loreal.com/en in a new tab.</p>
 
